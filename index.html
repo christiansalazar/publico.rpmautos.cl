@@ -1,1 +1,305 @@
-hola www.rpmautos.cl
+<!doctype html>
+<html lang="en" data-beasties-container>
+  <head><base href="/">
+    <meta charset="utf-8">
+    <title>RPMautos.cl</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="./assets/logo-solo.png" type="image/png">
+    <link rel="stylesheet" href="./assets/bulma.min.css">
+
+    <style>
+      
+      html {
+        color-scheme: light;
+      }
+   
+    .roboto-x {
+      font-family: "Arial", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+    }
+
+      .main-v {
+        background-image:
+          linear-gradient(rgba(0, 0, 0, 0.8) 0%, rgb(0 0 0 / 60%) 70%, rgb(0 0 0 / 91%) 100%),
+          url(./assets/textura1.jpeg);
+      }
+
+      .box1 {
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.6);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        box-shadow:
+          0 8px 40px rgba(0, 0, 0, 0.4),
+          inset 0 1px 0 rgba(255, 255, 255, 0.06);
+      }
+
+      :root {
+        --primary: #bf3f0c;
+        --primary-hi: #e63803; /*para lineas*/
+        --primary-dark: #a3350a;
+        --primary-bg: rgba(191, 63, 12, 0.08);
+
+        --warning: #ff8b00;
+        --warning-dark: #e07a00;
+        --warning-bg: rgba(255, 139, 0, 0.08);
+
+        --success: #133961;
+        --success-dark: #0e2d4d;
+        --success-bg: rgba(19, 57, 97, 0.08);
+
+        --info: #00b6ff;
+        --info-dark: #009ae0;
+        --info-bg: rgba(0, 182, 255, 0.08);
+
+        --danger: #830f0e;
+        --danger-dark: #6d0d0c;
+        --danger-bg: rgba(131, 15, 14, 0.08);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: white;
+      }
+
+      .grad1 {
+        background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 40%, #222222 100%);
+      }
+
+      /* ===== PRIMARY ===== */
+      .button.is-primary,
+      .tag.is-primary,
+      .has-background-primary {
+        background-color: var(--primary) !important;
+        border-color: var(--primary) !important;
+        color: #fff !important;
+      }
+      .button.is-primary:hover {
+        background-color: var(--primary-dark) !important;
+        border-color: var(--primary-dark) !important;
+        color: #fff !important;
+      }
+      .button.is-primary.is-outlined {
+        border-color: var(--primary) !important;
+        color: var(--primary) !important;
+        background-color: transparent !important;
+      }
+      .button.is-primary.is-outlined:hover {
+        background-color: var(--primary-bg) !important;
+        color: var(--primary) !important;
+      }
+      .pagination-link.is-current {
+        background-color: var(--primary) !important;
+        border-color: var(--primary) !important;
+        color: #fff !important;
+      }
+      .navbar.is-primary {
+        background-color: var(--primary) !important;
+      }
+      .has-text-primary {
+        color: var(--primary) !important;
+      }
+      .tag.is-light {
+        background-color: var(--primary-bg) !important;
+        color: var(--primary) !important;
+      }
+
+      /* ===== PRIMARY OUTLINED ===== */
+      .is-primary-outlined {
+        border: 2px solid var(--primary) !important;
+        color: var(--primary) !important;
+        background-color: transparent !important;
+      }
+      .is-primary-outlined:hover {
+        background-color: var(--primary-bg) !important;
+        color: var(--primary) !important;
+      }
+
+      /* ===== WARNING ===== */
+      .button.is-warning,
+      .tag.is-warning,
+      .has-background-warning {
+        background-color: var(--warning) !important;
+        border-color: var(--warning) !important;
+        color: #fff !important;
+      }
+      .button.is-warning:hover {
+        background-color: var(--warning-dark) !important;
+        border-color: var(--warning-dark) !important;
+        color: #fff !important;
+      }
+      .button.is-warning.is-outlined {
+        border-color: var(--warning) !important;
+        color: var(--warning) !important;
+      }
+      .button.is-warning.is-outlined:hover {
+        background-color: var(--warning-bg) !important;
+      }
+      .has-text-warning {
+        color: var(--warning) !important;
+      }
+
+      /* ===== SUCCESS ===== */
+      .button.is-success,
+      .tag.is-success,
+      .has-background-success {
+        background-color: var(--success) !important;
+        border-color: var(--success) !important;
+        color: #fff !important;
+      }
+      .button.is-success:hover {
+        background-color: var(--success-dark) !important;
+        border-color: var(--success-dark) !important;
+        color: #fff !important;
+      }
+      .button.is-success.is-outlined {
+        border-color: var(--success) !important;
+        color: var(--success) !important;
+      }
+      .button.is-success.is-outlined:hover {
+        background-color: var(--success-bg) !important;
+      }
+      .has-text-success {
+        color: var(--success) !important;
+      }
+
+      /* ===== INFO ===== */
+      .button.is-info,
+      .tag.is-info,
+      .has-background-info {
+        background-color: var(--info) !important;
+        border-color: var(--info) !important;
+        color: #fff !important;
+      }
+      .button.is-info:hover {
+        background-color: var(--info-dark) !important;
+        border-color: var(--info-dark) !important;
+        color: #fff !important;
+      }
+      .button.is-info.is-outlined {
+        border-color: var(--info) !important;
+        color: var(--info) !important;
+      }
+      .button.is-info.is-outlined:hover {
+        background-color: var(--info-bg) !important;
+      }
+      .has-text-info {
+        color: var(--info) !important;
+      }
+
+      /* ===== DANGER ===== */
+      .button.is-danger,
+      .tag.is-danger,
+      .has-background-danger {
+        background-color: var(--danger) !important;
+        border-color: var(--danger) !important;
+        color: #fff !important;
+      }
+      .button.is-danger:hover {
+        background-color: var(--danger-dark) !important;
+        border-color: var(--danger-dark) !important;
+        color: #fff !important;
+      }
+      .button.is-danger.is-outlined {
+        border-color: var(--danger) !important;
+        color: var(--danger) !important;
+      }
+      .button.is-danger.is-outlined:hover {
+        background-color: var(--danger-bg) !important;
+      }
+      .has-text-danger {
+        color: var(--danger) !important;
+      }
+
+      /* ===== WHATSAPP ===== */
+      .button.is-whatsapp,
+      .tag.is-whatsapp,
+      .has-background-whatsapp {
+        background-color: #0dc143 !important;
+        border-color: #0dc143 !important;
+        color: #fff !important;
+      }
+      .button.is-whatsapp:hover {
+        background-color: #0ba83a !important;
+        border-color: #0ba83a !important;
+        color: #fff !important;
+      }
+      .has-text-whatsapp {
+        color: #0dc143 !important;
+      }
+
+      /* ===== DARK ===== */
+      .button.is-dark,
+      .tag.is-dark,
+      .has-background-dark {
+        background-color: #212529 !important;
+        border-color: #212529 !important;
+        color: #fff !important;
+      }
+      .button.is-dark:hover {
+        background-color: #1a1e21 !important;
+        border-color: #1a1e21 !important;
+        color: #fff !important;
+      }
+      .has-text-dark {
+        color: #212529 !important;
+      }
+
+      /* ===== LINK ===== */
+      a {
+        color: var(--primary) !important;
+      }
+      a:hover {
+        color: var(--primary-dark) !important;
+      }
+
+      /* ===== INPUT FOCUS ===== */
+      .input:focus,
+      .select select:focus,
+      .textarea:focus {
+        border-color: var(--primary) !important;
+        box-shadow: 0 0 0 0.125em var(--primary-bg) !important;
+      }
+
+      /* ===== TABS is-boxed ===== */
+      .tabs.is-boxed li.is-active a {
+        background-color: var(--primary) !important;
+        border-bottom-color: var(--primary) !important;
+        color: #fff !important;
+      }
+      .tabs.is-boxed li.is-active a:hover {
+        background-color: var(--primary-dark) !important;
+        color: #fff !important;
+      }
+      .tabs.is-boxed li a {
+        color: #7a7a7a;
+      }
+      .tabs.is-boxed li a:hover {
+        color: #fff;
+        background-color: rgba(191, 63, 12, 0.1);
+      }
+
+      /* ===== TABS is-toggle ===== */
+      .tabs.is-toggle li.is-active a {
+        background-color: var(--primary) !important;
+        border-color: var(--primary) !important;
+        color: #fff !important;
+      }
+
+      /* ===== BODY ===== */
+      body {
+        font-family: 'Roboto', 'Elms Sans', sans-serif;
+      }
+    </style>
+  <link rel="stylesheet" href="styles-5INURTSO.css"></head>
+  <body>
+    <app-root></app-root>
+  <script src="main-U3UT5ZLD.js" type="module"></script></body>
+</html>
