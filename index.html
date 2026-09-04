@@ -294,6 +294,41 @@
         color: #fff !important;
       }
 
+    select, input {
+      /* necesario para que navegador no use colores de su propia UI */
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background-color: #111 !important;
+      color: white !important;
+      border: 1px solid #ffffff44 !important;
+    }
+
+    input::placeholder {
+      color: #ffffff88 !important;
+      opacity: 1; /* Para Firefox */
+    }
+
+    /* Para navegadores antiguos */
+    input::-webkit-input-placeholder { color: #ffffff88 !important; }
+    input::-moz-placeholder { color: #ffffff88 !important; }
+    input:-ms-input-placeholder { color: #ffffff88 !important; }
+
+    label {
+        /* solo usadas en buscador */
+        font-size: smaller;
+        color: #ffffff88 !important; 
+    }
+
+    /* Para el dropdown en Windows */
+    select option, option {
+    }
+
+    .fondoLupa {
+      background-color: #111 !important;
+      border: 1px solid #ffffff44 !important;
+    }
+
       /* ===== BODY ===== */
       body {
         font-family: 'Roboto', 'Elms Sans', sans-serif;
@@ -302,5 +337,5 @@
   <link rel="stylesheet" href="styles-5INURTSO.css"></head>
   <body>
     <app-root></app-root>
-  <script src="main-FO7LJFS2.js" type="module"></script></body>
+  <script src="main-QRDMOR33.js" type="module"></script></body>
 </html>
